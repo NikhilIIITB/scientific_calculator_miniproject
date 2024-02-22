@@ -19,9 +19,7 @@ pipeline {
             steps {
                 script {
                     // Compile the Java code using Maven
-                    sh 'cd scientific_calculator'
-                    sh 'mvn package'
-                    sh 'cd ..'
+                    sh 'mvn -f scientific_calculator/pom.xml package'
                 }
             }
         }
