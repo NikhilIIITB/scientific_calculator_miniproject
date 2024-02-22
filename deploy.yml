@@ -1,3 +1,27 @@
+# ---
+# - name: Pull Docker Image from Docker Hub
+#   hosts: localhost
+#   remote_user: nikhil
+#   become: false
+#   tasks:
+#     - name: Pull Docker Image
+#       docker_image:
+#         name: "nikhiliiitb/scientific_calculator"
+#         source: pull
+#       register: docker_pull_result
+
+#     - name: Display Docker Pull Result
+#       debug:
+#         var: docker_pull_result
+        
+#     - name: Start Docker service
+#       service:
+#         name: docker
+#         state: started
+#     - name: Running container
+#       shell: docker run -it -d --name scientific_calculator nikhiliiitb/scientific_calculator
+
+
 ---
 - name: Pull Docker Image from Docker Hub
   hosts: localhost
@@ -14,9 +38,20 @@
       debug:
         var: docker_pull_result
         
+    - name: Check if container exists
+      shell: docker inspect --format="{{ .State.Running }}" scientific_calculator
+      register: container_running
+      ignore_errors: true
+
+    - name: Stop and remove existing container if present and running
+      shell: docker rm -f scientific_calculator
+      when: container_running.stdout == "true"
+      ignore_errors: true
+
     - name: Start Docker service
       service:
         name: docker
         state: started
+
     - name: Running container
       shell: docker run -it -d --name scientific_calculator nikhiliiitb/scientific_calculator
