@@ -44,7 +44,7 @@
       ignore_errors: true
 
     - name: Stop and remove existing container if present and running
-      shell: docker rm -f scientific_calculator
+      shell: docker stop scientific_calculator && docker rm scientific_calculator
       when: container_running.stdout == "true"
       ignore_errors: true
 
