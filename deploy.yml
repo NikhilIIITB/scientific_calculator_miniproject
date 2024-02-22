@@ -39,7 +39,7 @@
         var: docker_pull_result
         
     - name: Check if container exists
-      shell: docker inspect --format="{{ State.Running }}" scientific_calculator
+      shell: docker inspect --format={{ .State.Running }} scientific_calculator
       register: container_running
       ignore_errors: true
 
