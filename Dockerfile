@@ -6,4 +6,4 @@
 FROM openjdk:17
 COPY scientific_calculator/target/scientific_calculator-1.0-SNAPSHOT.jar /app/scientific_calculator.jar
 # WORKDIR ./
-CMD ["java", "-cp", "/app/scientific_calculator.jar", "org.example.Main"]
+CMD ["java", "-cp", "/app/scientific_calculator.jar", "org.spe.Main"]
