@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE_NAME = 'scientific_calculator'
         GITHUB_REPO_URL = 'https://github.com/NikhilIIITB/scientific_calculator_miniproject.git'
-        EMAIL_TO = 'nikhilnagesh.singh@iiitb.ac.in'
+        EMAIL_TO = 'NikhilNagesh.Singh@iiitb.ac.in'
     }
 
     stages {
