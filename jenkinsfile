@@ -16,11 +16,21 @@ pipeline {
                 }
             }
         }
-        stage('Maven Build') {
+        stage('Maven Compile') {
             steps {
                 script {
                     // Compile the Java code using Maven
-                    sh 'mvn -f scientific_calculator/pom.xml package'
+                    //sh 'mvn -f scientific_calculator/pom.xml package'
+                    sh mvn -f scientific_calculator/pom.xml clean compile
+                }
+            }
+        }
+        stage('Maven TEST') {
+            steps {
+                script {
+                    // Compile the Java code using Maven
+                    //sh 'mvn -f scientific_calculator/pom.xml package'
+                    sh mvn -f scientific_calculator/pom.xml test
                 }
             }
         }
