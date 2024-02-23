@@ -45,8 +45,8 @@
 
     - name: Stop and remove existing container if present and running
       shell: docker stop scientific_calculator && docker rm scientific_calculator
-      # when: container_running.stdout == "true"
-      when: container_running.stdout | search("true")
+      when: container_running.stdout == "true"
+      # when: container_running.stdout | search("true")
       ignore_errors: true
 
     - name: Start Docker service
