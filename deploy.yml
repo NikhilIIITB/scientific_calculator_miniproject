@@ -38,14 +38,14 @@
       debug:
         var: docker_pull_result
         
-    - name: Check if container exists
-      shell: docker inspect --format="\{\{ .State.Running \}\}" scientific_calculator
-      register: container_running
-      ignore_errors: true
+    # - name: Check if container exists
+    #   shell: docker inspect --format="\{\{ .State.Running \}\}" scientific_calculator
+    #   register: container_running
+    #   ignore_errors: true
 
     - name: Stop and remove existing container if present and running
       shell: docker stop scientific_calculator && docker rm scientific_calculator
-      when: container_running.stdout == "true"
+      # when: container_running.stdout == "true"
       # when: container_running.stdout | search("true")
       ignore_errors: true
 
