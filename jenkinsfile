@@ -21,7 +21,7 @@ pipeline {
                 script {
                     // Compile the Java code using Maven
                     //sh 'mvn -f scientific_calculator/pom.xml package'
-                    sh mvn -f scientific_calculator/pom.xml clean compile
+                    sh 'mvn -f scientific_calculator/pom.xml clean compile'
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
                 script {
                     // Compile the Java code using Maven
                     //sh 'mvn -f scientific_calculator/pom.xml package'
-                    sh mvn -f scientific_calculator/pom.xml test
+                    sh 'mvn -f scientific_calculator/pom.xml test'
                 }
             }
         }
