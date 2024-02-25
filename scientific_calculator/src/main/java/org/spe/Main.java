@@ -7,12 +7,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-public static void main(String[] args) {
-
         Calculator cal =new Calculator();
         int ch,num1=0,num2=0,ansi;
         double ansd;
         Scanner sc = new Scanner(System.in);
+
 
         do {
             System.out.println("1.Square Root");
