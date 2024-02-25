@@ -7,15 +7,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+public static void main(String[] args) {
+
         Calculator cal =new Calculator();
-        int ch,num1=0,num2=0;
+        int ch,num1=0,num2=0,ansi;
+        double ansd;
         Scanner sc = new Scanner(System.in);
 
         Main main=new Main();
 
         do {
-            System.out.println("1.ADD");
-            System.out.println("2.SUB");
+            System.out.println("1.Square Root");
+            System.out.println("2.Factorial");
+            System.out.println("3.Natural Logarithm");
+            System.out.println("4.Power");
             System.out.println("5.Exit");
             System.out.println("Enter choice:\t");
             ch = sc.nextInt();
@@ -24,16 +29,29 @@ public class Main {
             {
                 case 1:System.out.println("Enter num1:\t");
                          num1 = sc.nextInt();
-                        System.out.println("Enter num2:\t");
-                        num2 = sc.nextInt();
-                    System.out.println("Addition of two number = \t"+cal.add(num1,num2));
+                         ansd = cal.squareRoot(num1);
+                         if(ansd==-1) System.out.println("Invalid number entered");
+                         else System.out.println("Square Root of "+ num1+"= " +ansd);
                     break;
 
                 case 2:System.out.println("Enter num1:\t");
                     num1 = sc.nextInt();
+                    ansi = cal.factorial(num1);
+                    if(ansi==-1) System.out.println("Invalid number entered");
+                    else System.out.println("Factorial of "+ num1+" = "+ansi );
+                    break;
+                case 3:System.out.println("Enter num1:\t");
+                    num1 = sc.nextInt();
+                    ansd = cal.naturalLogarithm(num1);
+                    if(ansd==-1) System.out.println("Invalid number entered");
+                    else System.out.println("Natural Logarithm of "+ num1+" = "+ansd );
+                    break;
+                case 4:System.out.println("Enter num1:\t");
+                    num1 = sc.nextInt();
                     System.out.println("Enter num2:\t");
                     num2 = sc.nextInt();
-                    System.out.println("Substraction of two number = \t"+cal.sub(num1,num2));
+                    ansd = cal.power(num1,num2);
+                    System.out.println("power  = "+ansd );
                     break;
 
                 case 5:
@@ -45,19 +63,6 @@ public class Main {
             }
 
         }while (ch!=5);
-    }
-
-
-
-    public void getTwonumbers(int num1,int num2)
-    {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter num1:\t");
-        num1 = sc.nextInt();
-        System.out.println("Enter num2:\t");
-        num2 = sc.nextInt();
-
-
     }
 
 }
