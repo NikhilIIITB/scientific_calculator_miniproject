@@ -17,15 +17,6 @@ pipeline {
             }
         }
 
-        stage('Check TEST cases') {
-            steps {
-                script {
-                    // Compile the Java code using Maven
-                    //sh 'mvn -f scientific_calculator/pom.xml package'
-                    sh 'mvn -f scientific_calculator/pom.xml test'
-                }
-            }
-        }
         stage('Maven Compile') {
             steps {
                 script {
@@ -33,6 +24,16 @@ pipeline {
                     //sh 'mvn -f scientific_calculator/pom.xml package'
                     sh 'mvn -f scientific_calculator/pom.xml clean install -DskipTests'    //DskipTests to skip the test cases while building
 
+                }
+            }
+        }
+
+        stage('Check TEST cases') {
+            steps {
+                script {
+                    // Compile the Java code using Maven
+                    //sh 'mvn -f scientific_calculator/pom.xml package'
+                    sh 'mvn -f scientific_calculator/pom.xml test'
                 }
             }
         }
