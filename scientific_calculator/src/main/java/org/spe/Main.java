@@ -14,8 +14,6 @@ public static void main(String[] args) {
         double ansd;
         Scanner sc = new Scanner(System.in);
 
-        Main main=new Main();
-
         do {
             System.out.println("1.Square Root");
             System.out.println("2.Factorial");
