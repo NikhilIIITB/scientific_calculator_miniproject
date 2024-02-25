@@ -16,7 +16,6 @@ pipeline {
                 }
             }
         }
-
     stage('Maven Compile') {
         steps {
             script {
