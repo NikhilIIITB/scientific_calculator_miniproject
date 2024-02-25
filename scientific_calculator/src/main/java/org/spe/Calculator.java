@@ -13,7 +13,7 @@ public class Calculator {
 //        return num1 - num2;
 //    }
 
-    public double squareRoot(double num) {
+    public float squareRoot(float num) {
         if ( num<0) return -1;
         return Math.sqrt(num);
     }
@@ -23,7 +23,7 @@ public class Calculator {
         for(int i=1;i<=num;i++) ans*=i;
         return ans;
     }
-    public double naturalLogarithm(double num) {
+    public float naturalLogarithm(float num) {
         if ( num<0) return -1;
         return Math.log(num);
     }
