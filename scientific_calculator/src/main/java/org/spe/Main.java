@@ -33,10 +33,10 @@ public class Main {
                     break;
 
                 case 2:System.out.println("Enter num1:\t");
-                    num1 = sc.nextInt();
-                    ansi = cal.factorial(num1);
+                    int n = sc.nextInt();
+                    ansi = cal.factorial(n);
                     if(ansi==-1) System.out.println("Invalid number entered");
-                    else System.out.println("Factorial of "+ num1+" = "+ansi );
+                    else System.out.println("Factorial of "+ n+" = "+ansi );
                     break;
                 case 3:System.out.println("Enter num1:\t");
                     num1 = sc.nextFloat(); 
