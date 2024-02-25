@@ -28,7 +28,7 @@ public class Calculator {
         return Math.log(num);
     }
 
-    public double power(double base, double exponent) {
+    public float power(float base, float exponent) {
         return Math.pow(base, exponent);
     }
 }
