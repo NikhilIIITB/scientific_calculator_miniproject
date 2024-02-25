@@ -8,7 +8,8 @@ public class Main {
     public static void main(String[] args) {
 
         Calculator cal =new Calculator();
-        int ch,num1=0,num2=0,ansi;
+        int ch,ansi;
+        float num1=0,num2=0;
         double ansd;
         Scanner sc = new Scanner(System.in);
 
