@@ -47,7 +47,6 @@
         name: docker
         state: started
 
-
     - name: Running container
       # shell: docker run -it -d --name scientific_calculator nikhiliiitb/scientific_calculator
       shell: docker create -it --name scientific_calculator nikhiliiitb/scientific_calculator
