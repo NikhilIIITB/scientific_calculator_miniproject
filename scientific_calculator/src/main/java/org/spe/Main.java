@@ -20,7 +20,7 @@ public class Main {
             System.out.println("3.Natural Logarithm");
             System.out.println("4.Power");
             System.out.println("5.Exit");
-            System.out.println("Enter choice:\t");
+            System.out.print("Enter choice:\t");
             ch = sc.nextInt();
 
             switch (ch)
@@ -32,7 +32,7 @@ public class Main {
                          else System.out.println("Square Root of "+ num1+"= " +ansd);
                     break;
 
-                case 2:System.out.println("Enter number:\t");
+                case 2:System.out.print("Enter number:\t");
                     int n = sc.nextInt();
                     ansi = cal.factorial(n);
                     if(ansi==-1) System.out.println("Invalid number entered");
@@ -46,7 +46,7 @@ public class Main {
                     break;
                 case 4:System.out.print("Enter base:\t");
                     num1 = sc.nextFloat(); 
-                    System.out.println("Enter power:\t");
+                    System.out.print("Enter power:\t");
                     num2 = sc.nextFloat(); 
                     ansd = cal.power(num1,num2);
                     System.out.println("power  = "+ansd );
