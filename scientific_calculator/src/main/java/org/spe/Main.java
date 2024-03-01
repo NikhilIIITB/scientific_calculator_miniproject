@@ -25,28 +25,28 @@ public class Main {
 
             switch (ch)
             {
-                case 1:System.out.println("Enter num1:\t");
+                case 1:System.out.print("Enter number:\t");
                          num1 = sc.nextFloat(); 
                          ansd = cal.squareRoot(num1);
                          if(ansd==-1) System.out.println("Invalid number entered");
                          else System.out.println("Square Root of "+ num1+"= " +ansd);
                     break;
 
-                case 2:System.out.println("Enter num1:\t");
+                case 2:System.out.println("Enter number:\t");
                     int n = sc.nextInt();
                     ansi = cal.factorial(n);
                     if(ansi==-1) System.out.println("Invalid number entered");
                     else System.out.println("Factorial of "+ n+" = "+ansi );
                     break;
-                case 3:System.out.println("Enter num1:\t");
+                case 3:System.out.print("Enter number:\t");
                     num1 = sc.nextFloat(); 
                     ansd = cal.naturalLogarithm(num1);
                     if(ansd==-1) System.out.println("Invalid number entered");
                     else System.out.println("Natural Logarithm of "+ num1+" = "+ansd );
                     break;
-                case 4:System.out.println("Enter num1:\t");
+                case 4:System.out.print("Enter base:\t");
                     num1 = sc.nextFloat(); 
-                    System.out.println("Enter num2:\t");
+                    System.out.println("Enter power:\t");
                     num2 = sc.nextFloat(); 
                     ansd = cal.power(num1,num2);
                     System.out.println("power  = "+ansd );
