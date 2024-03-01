@@ -56,7 +56,7 @@ public class Main {
                     System.out.println("Exiting app...");
                     break;
 
-                default:
+                default: 
                     System.out.println("Invalid Choice");
             }
 
